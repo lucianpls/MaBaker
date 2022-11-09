@@ -125,11 +125,5 @@ def cache2mrf(srcpath, dst, version = 2):
 
 
 if __name__ == "__main__":
-    srcpath = "//esri.com/Departments/ProfessionalServices/NATO-Imagery_and_Data/DigitalGlobeCache/DigitalGlobe_AFG_Cache/_alllayers/L29"
-    dst = "Z:/NATO/GDL29"
     log.basicConfig(level = log.DEBUG, format = "%(asctime)-15s %(message)s")
-    if len(sys.argv) > 1:
-        srcpath = sys.argv[1]
-    if len(sys.argv) > 2:
-        dst = sys.argv[2]
-    cache2mrf(srcpath, dst, version = 1)
+    cache2mrf(sys.argv[1], sys.argv[2], version = 1)
