@@ -45,7 +45,7 @@ def main(opath = 'dest'):
                     "COMPRESS=JPEG",
                     "SPACING=4",
                     "DATANAME={}".format(bname),
-                    "OPTIONS='JFIF:1 OPTIMIZE:1'",
+                    "OPTIONS=JFIF:1 OPTIMIZE:1",
                     "QUALITY=75"
                     ]
                 )
