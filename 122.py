@@ -16,7 +16,7 @@
 # Description: Converts a V1 esri bundle to a V2 bundle
 #
 # Contributors:  Lucian Plesea
-# Created: 11/03/2025
+# Created: 2025-03-11
 #
 
 from argparse import ArgumentParser
