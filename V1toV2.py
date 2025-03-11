@@ -1,3 +1,5 @@
+DO NOT USE, WORK IN PROGRESS
+
 from argparse import ArgumentParser
 from os import path
 from mabaker import headerfix, createBundle, _readbidx, GFile
