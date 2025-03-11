@@ -111,6 +111,7 @@ def process(args):
     headerfix(outname)
 
 def main():
+    assert byteorder == "little", "This script only works on little endian machines"
     parser = ArgumentParser(description="Converts a V1 cache to V2 cache, no checks")
     parser.add_argument("source", help="Source bundle file")
     parser.add_argument("destination", help="Destination path")
