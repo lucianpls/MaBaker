@@ -12,10 +12,10 @@
             "console": "integratedTerminal"
         },
         {
-            "name": "V1toV2",
+            "name": "122",
             "type": "debugpy",
             "request": "launch",
-            "program": "V1toV2.py",
+            "program": "122.py",
             "args" : [
                 "/data/V1_cache/L12/R0580C0280.bundle",
                 "/data/V2_cache/L12/",
