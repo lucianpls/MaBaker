@@ -23,6 +23,7 @@ from argparse import ArgumentParser
 from os import path
 from sys import byteorder
 from array import array
+from mmap import mmap, ACCESS_READ
 import struct
 
 def v1offsets(index):
@@ -89,7 +90,7 @@ def process(args):
     with open(base + ".bundlx", "rb") as f:
         offsets = v1offsets(f.read())
     with open(base + ".bundle", "rb") as f:
-        data = f.read()
+        data = mmap(f.fileno(), 0, access=ACCESS_READ)
     # Create the output bundle
     outname = path.join(args.destination + basename)
     createBundle(outname)
@@ -108,6 +109,7 @@ def process(args):
         # Write the filled index, at offset 64
         outbundle.seek(64)
         outidx.tofile(outbundle)
+    data.close()
     headerfix(outname)
 
 def main():
