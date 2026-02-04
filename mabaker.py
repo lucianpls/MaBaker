@@ -969,7 +969,7 @@ def overviews(startlevel
                 compression = compression, resample = resample,
                 v2 = v2, nprocs = nprocs, options = options)
         if fillfrom:
-            if src.startswith("http"):
+            if fillfrom.startswith("http"):
                 filltiles(fillfrom + f"/{l}", dst)
             else:
                 filltiles(path.join(fillfrom, f"L{l:02}"), dst)
